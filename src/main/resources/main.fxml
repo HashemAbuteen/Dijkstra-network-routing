@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="943.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Pane fx:id="NetworkPane" layoutX="33.0" layoutY="-7.0" prefHeight="478.0" prefWidth="832.0" style="-fx-background-color: white; -fx-border-color: black;" />
+      <VBox layoutX="51.0" layoutY="498.0" spacing="5.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Random Seed">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SeedTF" />
+                  <Label text="Size:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SizeTF" />
+                  <Button fx:id="GenerateBtn" mnemonicParsing="false" onAction="#Generate" text="Generate" />
+                  <CheckBox fx:id="ShowEdges" mnemonicParsing="false" onAction="#selectShowEdges" text="Show Edges">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <Label text="Source Node">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="SourceNodeTF" onAction="#setSourceNode" />
+                  <Label text="Target Node:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TargetNodeTF" onAction="#setTargetNode" />
+                  <Button fx:id="ComputeCostBtn" mnemonicParsing="false" onAction="#ComputeCost" text="Compute Cost" />
+                  <Label text="Total Path Cost">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TotalPathCostTF" editable="false" opacity="0.54" prefHeight="26.0" prefWidth="103.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
