@@ -93,15 +93,9 @@ public class Controller {
                 Arrow arrow = new Arrow(path.get(i).getX(), path.get(i).getY(), path.get(i + 1).getX(), path.get(i + 1).getY());
 
                 arrow.getMainLine().setStroke(Color.CYAN);
-                arrow.getMainLine().setStrokeWidth(5.0f);
+                arrow.getMainLine().setStrokeWidth(2.0f);
                 arrow.getHeadB().setStroke(Color.CYAN);
-                Label l = new Label();
-                l.setText((int) path.get(i + 1).getPoint().getVertex().getCost() + "");
-                l.setLayoutX(arrow.getX2());
-                l.setLayoutY(arrow.getY2());
                 arrow.setHeadAVisible(false);
-                NetworkPane.getChildren().add(l);
-
                 NetworkPane.getChildren().addAll(arrow);
 
             }
